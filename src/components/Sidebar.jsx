@@ -4,13 +4,56 @@ import React, { useState } from 'react';
 
 // Implement an unordered list with three different colors. When a color is clicked, it should change the background color of the sidebar to the selected one.
 
-const [backgroundColor, setBackgroundColor] = useState(second);
+
 
 function Sidebar() {
+    
+    const [sidebarBgcolor, setSidebarBgColor] = useState("#A47864");
+   
+    const sidebarStyle = {
+        backgroundColor: sidebarBgcolor,
+        width: "20vw",
+        height: "60vh"
+    }
+    const ulStyle = {
+        listStyleType: "none",
+
+    }
+    const colors = [
+        {colorName: "red", toggleColor: "purple"},
+        {colorName: "blue", toggleColor: "yellow"},
+        {colorName: "green", toggleColor: "orange"}
+    ]
+    //  function toggleColors(colors){
+    //     if(colors[0].colorName === "red"){
+    //         setSidebarBgColor("purple");
+    //     }
+    //     if(colors[1].colorName === "blue"){
+    //         setSidebarBgColor("yellow");
+    //     } 
+    //     if(colors[2].colorName === "green"){
+    //         setSidebarBgColor("orange");
+    //     }
+    // }
+      function toggleRedClick() {
+    setSidebarBgColor('purple');
+  }
+
+  function toggleBlueClick() {
+    setSidebarBgColor('yellow');
+  }
+
+  function toggleGreenClick() {
+    setSidebarBgColor('orange');
+  }
   return (
-    <div>
-      
-    </div>
+    <aside style={sidebarStyle}>
+      <ul style={ulStyle}>
+        <li style={colors[0].colorName} onClick={toggleRedClick}></li>
+        <li style={colors[1].colorName} onClick={toggleBlueClick}></li>
+        <li style={colors[2].colorName} onClick={toggleGreenClick}></li>
+      </ul>
+    </aside>
   )
 }
 

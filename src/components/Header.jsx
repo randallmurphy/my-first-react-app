@@ -3,10 +3,17 @@ import React from 'react'
 // Assign unique background colors to each of the components.
 // Display your name.
 function Header() {
+    //const [headerStyle, setHeaderStyle] = useState(headerStyle)
+    const headerStyle = {
+        backgroundColor: "aqua",
+        width: "100%",
+        height: "20vh",
+        textAlign: "center"
+    }
   return (
-    <div>
-      <h1 style={{backgroundColor:"aqua", width:"100%", height:"20vh"}}>Randall Murphy</h1>
-    </div>
+    <header>
+      <h1 style={headerStyle}>My First React Application</h1>
+    </header>
   )
 }
 
