@@ -12,9 +12,15 @@ import square3 from '../assets/square3.jpeg';
 function Body() {
     const bodyStyle = {
         backgroundColor: "salmon",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
         textAlign: "center",
-        width: "80vw",
-        height: "60vh"
+        width: "78vw",
+        height: "60vh",
+        position: "absolute",
+        marginLeft: "21vw"
     }
     const imgStyle = {
         width: "300px"

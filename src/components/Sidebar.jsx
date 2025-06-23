@@ -19,11 +19,17 @@ function Sidebar() {
         listStyleType: "none",
 
     }
-    const colors = [
-        {colorName: "red", toggleColor: "purple"},
-        {colorName: "blue", toggleColor: "yellow"},
-        {colorName: "green", toggleColor: "orange"}
-    ]
+    
+    // const colors = [
+    //     {colorName: "red", toggleColor: "purple"},
+    //     {colorName: "blue", toggleColor: "yellow"},
+    //     {colorName: "green", toggleColor: "orange"}
+    // ]
+    // const liStyle = {
+    //   width: "50px",
+    //   height: "50px"
+      
+    // }
     //  function toggleColors(colors){
     //     if(colors[0].colorName === "red"){
     //         setSidebarBgColor("purple");
@@ -35,23 +41,23 @@ function Sidebar() {
     //         setSidebarBgColor("orange");
     //     }
     // }
-      function toggleRedClick() {
-    setSidebarBgColor('purple');
-  }
+  //     function toggleRedClick() {
+  //   setSidebarBgColor('purple');
+  // }
 
-  function toggleBlueClick() {
-    setSidebarBgColor('yellow');
-  }
+  // function toggleBlueClick() {
+  //   setSidebarBgColor('yellow');
+  // }
 
-  function toggleGreenClick() {
-    setSidebarBgColor('orange');
-  }
+  // function toggleGreenClick() {
+  //   setSidebarBgColor('orange');
+  // }
   return (
     <aside style={sidebarStyle}>
       <ul style={ulStyle}>
-        <li style={colors[0].colorName} onClick={toggleRedClick}></li>
-        <li style={colors[1].colorName} onClick={toggleBlueClick}></li>
-        <li style={colors[2].colorName} onClick={toggleGreenClick}></li>
+        <li style={{backgroundColor: "red"}} onClick={()=>setSidebarBgColor("purple")}></li>
+        <li style={{backgroundColor: "blue"}} onClick={()=>setSidebarBgColor("yellow")}></li>
+        <li style={{backgroundColor: "green"}} onClick={()=>setSidebarBgColor("orange")}></li>
       </ul>
     </aside>
   )

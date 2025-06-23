@@ -6,7 +6,11 @@ import React from 'react'
 function Footer() {
     const FooterStyle = {
         backgroundColor: "#C67FAE", //Crocus
-        textAlign: "center"
+        display: "flex",
+        justifyContent:"center",
+        alignItems: "center",
+        height: "10vh",
+        marginTop: "18px"
     }
   return (
     <footer style={FooterStyle}>

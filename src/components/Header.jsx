@@ -8,7 +8,9 @@ function Header() {
         backgroundColor: "aqua",
         width: "100%",
         height: "20vh",
-        textAlign: "center"
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
     }
   return (
     <header>
